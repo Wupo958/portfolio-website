@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tobias Rebs – Projects</title>
+    <link rel="icon" type="image/png" href="image/Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #2f3136;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header, footer {
+            background-color: #4A7ABE;
+            text-align: center;
+            padding: 20px 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 32px;
+                animation: fadeInDown 1s ease-in-out;
+            }
+
+            header a {
+                color: white;
+                text-decoration: none;
+                margin: 0 12px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+
+                header a:hover {
+                    color: #dcdcdc;
+                }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .project-section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s ease forwards;
+        }
+
+            .project-section:nth-child(1) {
+                animation-delay: 0.2s;
+            }
+
+            .project-section:nth-child(2) {
+                animation-delay: 0.4s;
+            }
+
+            .project-section:nth-child(3) {
+                animation-delay: 0.6s;
+            }
+
+            .project-section:nth-child(4) {
+                animation-delay: 0.8s;
+            }
+
+            .project-section h2 {
+                font-size: 26px;
+                color: #ffffff;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #4A7ABE;
+                display: inline-block;
+                padding-bottom: 5px;
+            }
+
+        .project-description {
+            line-height: 1.7;
+            font-size: 17px;
+            color: #dcdcdc;
+            margin-top: 10px;
+        }
+
+        .github-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background-color: #24292e;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+            .github-button:hover {
+                background-color: #0366d6;
+                transform: translateY(-2px);
+            }
+
+        .project-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .project-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .project-side-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            font-size: 14px;
+            color: #f0f0f0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            header a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 20px 15px;
+            }
+
+            .project-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-side-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tobias Rebs - Projects</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="https://github.com/Wupo958" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/tobias-rebs-87a8b52b9/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="project-section project-flex">
+            <div class="project-text">
+                <h2>Random User AR App – Mobile Development</h2>
+                <p class="project-description">
+                    This Android app was developed as part of the <em>Mobile Application Development</em> course.
+                    It fetches random user data from the <a href="https://randomuser.me" target="_blank" style="color: #8ab4f8;">randomuser.me</a> API
+                    and stores it locally using an SQLite database.
+                    Each user is assigned a unique QR code, which can be scanned using the device camera.
+                    When a known QR code is detected, the associated user information is displayed in real-time through an augmented reality overlay.
+                </p>
+                <p class="project-description">
+                    The app features three core screens: a user overview with sorting functionality,
+                    a detailed view showing each user's information (including photo, name, birthdate, phone number),
+                    and an AR screen for live marker detection and interaction.
+                    Additionally, a settings section was implemented to allow database reset and bulk user generation.
+                </p>
+                <a class="github-button" href="https://github.com/Wupo958/App-Mobile-Development" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+
+        <section class="project-section project-flex">
+            <div class="project-text">
+                <h2>Plane learning to fly - Machine Learning</h2>
+                <p class="project-description">
+                    A small project where I created autonomous planes in Unity using the PPO (Proximal Policy Optimization)
+                    reinforcement learning algorithm.
+                    The planes learned to take off, fly, collect checkpoints, and avoid obstacles through training.
+                    This project gave me hands-on experience with Unity ML-Agents, neural network tuning, and environment design for AI learning.
+                </p>
+                <a class="github-button" href="https://github.com/Wupo958/Plane-Machine-Learning" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+
+        <section class="project-section project-flex">
+            <div class="project-text">
+                <h2>Copper Feathers - 2D Platformer</h2>
+                <p class="project-description">
+                    <em>Copper Feathers</em> is a 2D platformer developed in Unity, created collaboratively with a team of four other students.
+                    The game features two distinct levels, a challenging boss fight, upgrade mechanics, environmental obstacles, and fully interactable NPCs.
+                    It was awarded Best Mechanics in our course showcase for its polished gameplay systems and intuitive design.
+                    This project gave me valuable experience in game design, level scripting, team collaboration, and Unity development.
+                </p>
+                <a class="github-button" href="https://anuki-kaida.itch.io/copper-feathers" target="_blank">View on Itch.io</a>
+            </div>
+            <img src="image/copper-feathers-icon.png" alt="Copper Feathers Screenshot" class="project-side-image">
+        </section>
+
+        <section class="project-section project-flex">
+            <div class="project-text">
+                <h2>Arcane Siege - Top-Down Action Adventure</h2>
+                <p class="project-description">
+                    <em>Arcane Siege</em> is a top-down action-adventure game inspired by classic titles like <em>The Legend of Zelda: A Link to the Past</em>.
+                    Developed in C++ using the Raylib graphics library, this project was built in collaboration with a team of five.
+                    The game features boss fights, environmental puzzles, and three distinct player-controlled spells with different effects and use cases.
+                    Creating <em>Arcane Siege</em> deepened my experience in C++ programming, game architecture, and collaborative gameplay design.
+                </p>
+                <a class="github-button" href="https://michaelfalkenberg.itch.io/arcane-siege" target="_blank">View on Itch.io</a>
+            </div>
+            <img src="image/arcane-siege-icon.png" alt="Arcane Siege Screenshot" class="project-side-image">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tobias Rebs</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tobias Rebs Portfolio</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="image/Favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #2f3136;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header, footer {
+            background-color: #4A7ABE;
+            text-align: center;
+            padding: 20px 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 32px;
+                animation: fadeInDown 1s ease-in-out;
+            }
+
+            header a {
+                color: white;
+                text-decoration: none;
+                margin: 0 12px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: color 0.3s ease;
+            }
+
+                header a:hover {
+                    color: #dcdcdc;
+                }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        section {
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s ease forwards;
+        }
+
+            section:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            section:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+
+            section:nth-child(4) {
+                animation-delay: 0.6s;
+            }
+
+        h2 {
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4A7ABE;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section-text {
+            color: #dcdcdc;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        ul.section-text li {
+            margin-bottom: 8px;
+            transition: transform 0.2s ease;
+        }
+
+            ul.section-text li:hover {
+                transform: translateX(5px);
+                color: #ffffff;
+            }
+
+        footer {
+            font-size: 14px;
+            color: #f0f0f0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            header a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tobias Rebs - Portfolio</h1>
+        <nav>
+            <a href="projects.html">Projects</a>
+            <a href="https://github.com/Wupo958" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/tobias-rebs-87a8b52b9/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <main>
+        <section style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+            <div style="flex: 1 1 60%;">
+                <h2>About Me</h2>
+                <p class="section-text">
+                    Hi, I'm Tobias a passionate game programming student currently pursuing my Bachelor's degree.
+                    I enjoy turning creative ideas into interactive digital experiences, and I'm always looking to expand
+                    my skills in game development, machine learning and software engineering.
+                </p>
+            </div>
+            <div style="flex: 1 1 35%; text-align: center;">
+                <img src="image/profile.jpg" alt="Picture of mysel" style="max-width: 250px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul class="section-text">
+                <li>C++ / C# / Python / Kotlin / SQL</li>
+                <li>Unreal Engine</li>
+                <li>Unity</li>
+                <li>Android Studio</li>
+                <li>Working in Teams</li>
+                <li>Scrum</li>
+                <li>Machine Learning</li>
+                <li>APIs</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <ul class="section-text">
+                <li>10.2023 - Present | Bachelor in Virtual Reality & Game Development</li>
+                <li>10.2022 - 10.2023 | Bachelor in Mechanical Engineering</li>
+                <li>2014 - 2022 | Abitur, Kopernikus Gymnasium Lintorf</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tobias Rebs</p>
+    </footer>
+</body>
+
+</html>
